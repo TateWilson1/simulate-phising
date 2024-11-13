@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Phishing Awareness Quiz</h1>
+    <form id="quiz-form">
+        <label>1. What should you check for in a suspicious email?</label><br>
+        <input type="radio" name="question1" value="correct"> Correct answer<br>
+        <input type="radio" name="question1" value="wrong"> Wrong answer<br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <div id="result"></div>
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const result = document.querySelector('input[name="question1"]:checked').value;
+            document.getElementById('result').innerText = result === 'correct' ? 'Correct!' : 'Try again!';
+        });
+    </script>
+</body>
+</html>

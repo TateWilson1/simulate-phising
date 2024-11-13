@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Gmail Email</title>
+    <link rel="stylesheet" href="../public/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Mimic Gmail's font */
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes at least the full height of the viewport */
+        }
+
+        .gmail-interface {
+            flex: 1; /* Allow the main content to expand and fill space */
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column; /* Stack header and main content vertically */
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between logo and nav links */
+            position: relative;
+        }
+
+        .header img {
+            width: 100px; /* Gmail logo width */
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0 20px; /* Margins for spacing */
+            text-align: center; /* Center the search bar */
+        }
+
+        .search-bar input {
+            width: 100%; /* Full width */
+            max-width: 300px; /* Maximum width for search bar */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px; /* Rounded edges */
+            font-size: 14px; /* Font size */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .account-icon {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .account-icon img {
+            width: 30px; /* Account icon size */
+            margin-left: 10px; /* Space between icon and text */
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f1f1f1;
+            border-right: 1px solid #ddd;
+            float: left;
+            height: calc(100vh - 60px); /* Full height minus header */
+            position: fixed; /* Keep sidebar fixed */
+        }
+
+        .sidebar h3 {
+            padding: 15px;
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .main-content {
+            margin-left: 200px; /* Increased from 250px to 300px */
+            padding: 20px;
+            flex: 1; /* Make the main content flexible */
+        }
+
+        .alert {
+            background-color: #ffcc00; /* Yellow background */
+            color: #000; /* Black text */
+            padding: 10px;
+            border: 1px solid #ff9900; /* Darker yellow border */
+            margin-bottom: 20px; /* Space below the alert */
+            border-radius: 5px; /* Rounded corners */
+            text-align: center; /* Centered text */
+        }
+
+        .email-container {
+            max-width: 600px;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #ddd; /* Light border */
+            margin-bottom: 20px;
+        }
+
+        .email-details {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .email-details p {
+            margin: 3px 0;
+        }
+
+        .email-body {
+            margin-top: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .email-body a {
+            color: #1a73e8; /* Gmail link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .email-body a:hover {
+            text-decoration: underline; /* Underline on hover for links */
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="gmail-interface">
+        <div class="header">
+            <img src="/images/gmail.jpg" alt="Gmail Logo">
+            <div class="search-bar">
+                <input type="text" placeholder="Search mail">
+            </div>
+            <div class="nav-links">
+                <a href="#">Compose</a>
+                <a href="#">Inbox</a>
+                <a href="#">Sent</a>
+                <a href="#">Drafts</a>
+                <div class="account-icon">
+                    <img src="/images/gmail.jpg" alt="Account Icon">
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3>Categories</h3>
+            <a href="#">Primary</a>
+            <a href="#">Social</a>
+            <a href="#">Promotions</a>
+            <a href="#">Updates</a>
+            <a href="#">Forums</a>
+        </div>
+        <div class="main-content">
+            <div class="alert">
+                ⚠️ This is a fake website! Please do not enter any sensitive information.
+            </div>
+            <div class="email-container">
+                <h2>Unusual Activity on Your Account - Action Needed</h2>
+                <div class="email-details">
+                    <p><strong>From:</strong> <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Person_icon.png/24px-Person_icon.png" alt="Sender Icon"> phishing@example.com</p>
+                    <p><strong>To:</strong> <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Person_icon.png/24px-Person_icon.png" alt="Recipient Icon"> victim@example.com</p>
+                    <p><strong>Subject:</strong> Important Account Verification Needed</p>
+                    <p><strong>Date:</strong> November 4, 2024</p>
+                </div>
+                <hr>
+                <div class="email-body">
+                    <p>Dear User,</p>
+                    <p>We have detected unusual activity on your account. Please verify your identity by clicking the link below:</p>
+                    <p><a href="https://example.com/fake-bank-signin.html">Verify Account</a></p>
+                    <p>If you do not verify your account within 24 hours, it may be temporarily suspended.</p>
+                    <p>Thank you for your prompt attention to this matter.</p>
+                    <p>Best regards,<br>The Gmail Team</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Fake Gmail Phising Website</p>
+    </footer>
+</body>
+</html>

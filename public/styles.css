@@ -1,0 +1,100 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+}
+
+/* Header styles */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content container */
+main {
+    flex: 1; /* Allows the main content to expand to fill available space */
+    padding: 20px;
+}
+
+/* Centered container */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Intro section centered */
+.intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Feature box styles */
+.feature {
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    width: calc(30% - 30px);
+    min-width: 200px;
+    text-align: center;
+    color: black;
+}
+
+.feature a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.feature img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Sticky footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+footer p {
+    margin: 0;
+}
